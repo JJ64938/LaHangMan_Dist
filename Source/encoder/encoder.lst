@@ -1,0 +1,350 @@
+   1               		.file	"encoder.c"
+   2               	__SREG__ = 0x3f
+   3               	__SP_H__ = 0x3e
+   4               	__SP_L__ = 0x3d
+   5               	__CCP__  = 0x34
+   6               	__tmp_reg__ = 0
+   7               	__zero_reg__ = 1
+  15               	.Ltext0:
+  16               	.global	init_encoder
+  18               	init_encoder:
+  19               	.LFB2:
+  20               	.LM1:
+  21               	/* prologue: function */
+  22               	/* frame size = 0 */
+  23               	.LM2:
+  24 0000 8DB1      		in r24,45-32
+  25 0002 8F7C      		andi r24,lo8(-49)
+  26 0004 8DB9      		out 45-32,r24
+  27               	.LM3:
+  28 0006 8EB1      		in r24,46-32
+  29 0008 8063      		ori r24,lo8(48)
+  30 000a 8EB9      		out 46-32,r24
+  31               	.LM4:
+  32 000c 6F98      		cbi 45-32,7
+  33               	.LM5:
+  34 000e 779A      		sbi 46-32,7
+  35               	.LM6:
+  36 0010 87B1      		in r24,39-32
+  37 0012 837C      		andi r24,lo8(-61)
+  38 0014 87B9      		out 39-32,r24
+  39               	.LM7:
+  40 0016 88B1      		in r24,40-32
+  41 0018 8C63      		ori r24,lo8(60)
+  42 001a 88B9      		out 40-32,r24
+  43               	.LM8:
+  44 001c 2698      		cbi 36-32,6
+  45               	.LM9:
+  46 001e 2E9A      		sbi 37-32,6
+  47               	/* epilogue start */
+  48               	.LM10:
+  49 0020 0895      		ret
+  50               	.LFE2:
+  52               	.global	scan_encoder
+  54               	scan_encoder:
+  55               	.LFB3:
+  56               	.LM11:
+  57               	/* prologue: function */
+  58               	/* frame size = 0 */
+  59               	.LM12:
+  60 0022 8CB1      		in r24,44-32
+  61               	.LVL0:
+  62               	.LM13:
+  63 0024 85FD      		sbrc r24,5
+  64 0026 00C0      		rjmp .L4
+  65               	.LVL1:
+  66 0028 20E0      		ldi r18,lo8(0)
+  67               	.LVL2:
+  68 002a 00C0      		rjmp .L5
+  69               	.LVL3:
+  70               	.L4:
+  71 002c 23E0      		ldi r18,lo8(3)
+  72               	.LVL4:
+  73               	.L5:
+  74               	.LM14:
+  75 002e 84FF      		sbrs r24,4
+  76 0030 00C0      		rjmp .L6
+  77               	.LM15:
+  78 0032 81E0      		ldi r24,lo8(1)
+  79 0034 2827      		eor r18,r24
+  80               	.L6:
+  81               	.LM16:
+  82 0036 9091 0000 		lds r25,last.1265
+  83 003a 921B      		sub r25,r18
+  84               	.LM17:
+  85 003c 90FF      		sbrs r25,0
+  86 003e 00C0      		rjmp .L8
+  87               	.LM18:
+  88 0040 2093 0000 		sts last.1265,r18
+  89               	.LM19:
+  90 0044 8091 0000 		lds r24,delta
+  91 0048 8150      		subi r24,lo8(-(-1))
+  92 004a 9270      		andi r25,lo8(2)
+  93 004c 890F      		add r24,r25
+  94 004e 8093 0000 		sts delta,r24
+  95               	.L8:
+  96 0052 0895      		ret
+  97               	.LFE3:
+  99               	.global	os_enc_delta
+ 101               	os_enc_delta:
+ 102               	.LFB4:
+ 103               	.LM20:
+ 104               	/* prologue: function */
+ 105               	/* frame size = 0 */
+ 106               	.LM21:
+ 107 0054 8091 0000 		lds r24,delta
+ 108               	.LVL5:
+ 109               	.LM22:
+ 110 0058 9091 0000 		lds r25,delta
+ 111 005c 9170      		andi r25,lo8(1)
+ 112 005e 9093 0000 		sts delta,r25
+ 113               	.LM23:
+ 114 0062 8595      		asr r24
+ 115               	.LVL6:
+ 116               	/* epilogue start */
+ 117 0064 0895      		ret
+ 118               	.LFE4:
+ 120               	.global	scan_switches
+ 122               	scan_switches:
+ 123               	.LFB5:
+ 124               	.LM24:
+ 125               	/* prologue: function */
+ 126               	/* frame size = 0 */
+ 127               	.LM25:
+ 128 0066 3091 0000 		lds r19,switch_state
+ 129 006a 86B1      		in r24,38-32
+ 130 006c 2CB1      		in r18,44-32
+ 131               	.LVL7:
+ 132 006e 93B1      		in r25,35-32
+ 133 0070 2F67      		ori r18,lo8(127)
+ 134 0072 806C      		ori r24,lo8(-64)
+ 135 0074 2823      		and r18,r24
+ 136 0076 9F6B      		ori r25,lo8(-65)
+ 137 0078 2923      		and r18,r25
+ 138 007a 2095      		com r18
+ 139 007c 2327      		eor r18,r19
+ 140               	.LM26:
+ 141 007e 8091 0000 		lds r24,ct0.1296
+ 142 0082 8223      		and r24,r18
+ 143 0084 8095      		com r24
+ 144 0086 8093 0000 		sts ct0.1296,r24
+ 145               	.LM27:
+ 146 008a 9091 0000 		lds r25,ct1.1297
+ 147 008e 9223      		and r25,r18
+ 148 0090 9827      		eor r25,r24
+ 149 0092 9093 0000 		sts ct1.1297,r25
+ 150               	.LM28:
+ 151 0096 8223      		and r24,r18
+ 152               	.LVL8:
+ 153 0098 8923      		and r24,r25
+ 154               	.LM29:
+ 155 009a 9091 0000 		lds r25,switch_state
+ 156 009e 9827      		eor r25,r24
+ 157 00a0 9093 0000 		sts switch_state,r25
+ 158               	.LM30:
+ 159 00a4 2091 0000 		lds r18,switch_press
+ 160 00a8 9091 0000 		lds r25,switch_state
+ 161 00ac 8923      		and r24,r25
+ 162 00ae 822B      		or r24,r18
+ 163 00b0 8093 0000 		sts switch_press,r24
+ 164               	.LM31:
+ 165 00b4 8091 0000 		lds r24,switch_state
+ 166               	.LVL9:
+ 167 00b8 8C7F      		andi r24,lo8(-4)
+ 168 00ba 01F4      		brne .L12
+ 169               	.LM32:
+ 170 00bc 8CE3      		ldi r24,lo8(60)
+ 171 00be 8093 0000 		sts rpt.1298,r24
+ 172               	.L12:
+ 173               	.LM33:
+ 174 00c2 8091 0000 		lds r24,rpt.1298
+ 175 00c6 8150      		subi r24,lo8(-(-1))
+ 176 00c8 8093 0000 		sts rpt.1298,r24
+ 177 00cc 8823      		tst r24
+ 178 00ce 01F4      		brne .L14
+ 179               	.LM34:
+ 180 00d0 8AE0      		ldi r24,lo8(10)
+ 181 00d2 8093 0000 		sts rpt.1298,r24
+ 182               	.LM35:
+ 183 00d6 9091 0000 		lds r25,switch_rpt
+ 184 00da 8091 0000 		lds r24,switch_state
+ 185 00de 8C7F      		andi r24,lo8(-4)
+ 186 00e0 892B      		or r24,r25
+ 187 00e2 8093 0000 		sts switch_rpt,r24
+ 188               	.L14:
+ 189 00e6 0895      		ret
+ 190               	.LFE5:
+ 192               	.global	get_switch_press
+ 194               	get_switch_press:
+ 195               	.LFB6:
+ 196               	.LM36:
+ 197               	.LVL10:
+ 198               	/* prologue: function */
+ 199               	/* frame size = 0 */
+ 200               	.LM37:
+ 201 00e8 9091 0000 		lds r25,switch_press
+ 202               	.LVL11:
+ 203 00ec 9823      		and r25,r24
+ 204               	.LM38:
+ 205 00ee 8091 0000 		lds r24,switch_press
+ 206 00f2 8927      		eor r24,r25
+ 207 00f4 8093 0000 		sts switch_press,r24
+ 208               	.LM39:
+ 209 00f8 892F      		mov r24,r25
+ 210               	/* epilogue start */
+ 211 00fa 0895      		ret
+ 212               	.LFE6:
+ 214               	.global	get_switch_rpt
+ 216               	get_switch_rpt:
+ 217               	.LFB7:
+ 218               	.LM40:
+ 219               	.LVL12:
+ 220               	/* prologue: function */
+ 221               	/* frame size = 0 */
+ 222               	.LM41:
+ 223 00fc 9091 0000 		lds r25,switch_rpt
+ 224               	.LVL13:
+ 225 0100 9823      		and r25,r24
+ 226               	.LM42:
+ 227 0102 8091 0000 		lds r24,switch_rpt
+ 228 0106 8927      		eor r24,r25
+ 229 0108 8093 0000 		sts switch_rpt,r24
+ 230               	.LM43:
+ 231 010c 892F      		mov r24,r25
+ 232               	/* epilogue start */
+ 233 010e 0895      		ret
+ 234               	.LFE7:
+ 236               	.global	get_switch_state
+ 238               	get_switch_state:
+ 239               	.LFB8:
+ 240               	.LM44:
+ 241               	.LVL14:
+ 242               	/* prologue: function */
+ 243               	/* frame size = 0 */
+ 244               	.LM45:
+ 245 0110 9091 0000 		lds r25,switch_state
+ 246               	.LM46:
+ 247 0114 8923      		and r24,r25
+ 248               	.LVL15:
+ 249               	/* epilogue start */
+ 250 0116 0895      		ret
+ 251               	.LFE8:
+ 253               	.global	get_switch_short
+ 255               	get_switch_short:
+ 256               	.LFB9:
+ 257               	.LM47:
+ 258               	.LVL16:
+ 259               	/* prologue: function */
+ 260               	/* frame size = 0 */
+ 261               	.LM48:
+ 262 0118 9091 0000 		lds r25,switch_state
+ 263               	.LVL17:
+ 264               	.LBB8:
+ 265               	.LBB9:
+ 266               	.LM49:
+ 267 011c 2091 0000 		lds r18,switch_press
+ 268 0120 9095      		com r25
+ 269 0122 9823      		and r25,r24
+ 270 0124 9223      		and r25,r18
+ 271               	.LM50:
+ 272 0126 8091 0000 		lds r24,switch_press
+ 273               	.LVL18:
+ 274 012a 8927      		eor r24,r25
+ 275 012c 8093 0000 		sts switch_press,r24
+ 276               	.LBE9:
+ 277               	.LBE8:
+ 278               	.LM51:
+ 279 0130 892F      		mov r24,r25
+ 280               	/* epilogue start */
+ 281 0132 0895      		ret
+ 282               	.LFE9:
+ 284               	.global	get_switch_long
+ 286               	get_switch_long:
+ 287               	.LFB10:
+ 288               	.LM52:
+ 289               	.LVL19:
+ 290               	/* prologue: function */
+ 291               	/* frame size = 0 */
+ 292               	.LBB10:
+ 293               	.LBB11:
+ 294               	.LM53:
+ 295 0134 9091 0000 		lds r25,switch_rpt
+ 296               	.LVL20:
+ 297 0138 9823      		and r25,r24
+ 298               	.LM54:
+ 299 013a 8091 0000 		lds r24,switch_rpt
+ 300               	.LVL21:
+ 301 013e 8927      		eor r24,r25
+ 302 0140 8093 0000 		sts switch_rpt,r24
+ 303               	.LBE11:
+ 304               	.LBE10:
+ 305               	.LBB12:
+ 306               	.LBB13:
+ 307               	.LM55:
+ 308 0144 8091 0000 		lds r24,switch_press
+ 309               	.LVL22:
+ 310 0148 8923      		and r24,r25
+ 311               	.LM56:
+ 312 014a 9091 0000 		lds r25,switch_press
+ 313               	.LVL23:
+ 314 014e 9827      		eor r25,r24
+ 315 0150 9093 0000 		sts switch_press,r25
+ 316               	.LVL24:
+ 317               	/* epilogue start */
+ 318               	.LBE13:
+ 319               	.LBE12:
+ 320               	.LM57:
+ 321 0154 0895      		ret
+ 322               	.LFE10:
+ 324               	.global	clear_switches
+ 326               	clear_switches:
+ 327               	.LFB11:
+ 328               	.LM58:
+ 329               	/* prologue: function */
+ 330               	/* frame size = 0 */
+ 331               	.LM59:
+ 332 0156 1092 0000 		sts switch_press,__zero_reg__
+ 333               	.LM60:
+ 334 015a 1092 0000 		sts switch_rpt,__zero_reg__
+ 335               	/* epilogue start */
+ 336               	.LM61:
+ 337 015e 0895      		ret
+ 338               	.LFE11:
+ 340               		.lcomm rpt.1298,1
+ 341               		.lcomm ct1.1297,1
+ 342               		.lcomm ct0.1296,1
+ 343               		.lcomm last.1265,1
+ 344               		.comm delta,1,1
+ 345               		.comm switch_state,1,1
+ 346               		.comm switch_press,1,1
+ 347               		.comm switch_rpt,1,1
+ 444               	.Letext0:
+DEFINED SYMBOLS
+                            *ABS*:00000000 encoder.c
+C:\Users\JOSHUA~1\AppData\Local\Temp/ccFNqysF.s:2      *ABS*:0000003f __SREG__
+C:\Users\JOSHUA~1\AppData\Local\Temp/ccFNqysF.s:3      *ABS*:0000003e __SP_H__
+C:\Users\JOSHUA~1\AppData\Local\Temp/ccFNqysF.s:4      *ABS*:0000003d __SP_L__
+C:\Users\JOSHUA~1\AppData\Local\Temp/ccFNqysF.s:5      *ABS*:00000034 __CCP__
+C:\Users\JOSHUA~1\AppData\Local\Temp/ccFNqysF.s:6      *ABS*:00000000 __tmp_reg__
+C:\Users\JOSHUA~1\AppData\Local\Temp/ccFNqysF.s:7      *ABS*:00000001 __zero_reg__
+C:\Users\JOSHUA~1\AppData\Local\Temp/ccFNqysF.s:18     .text:00000000 init_encoder
+C:\Users\JOSHUA~1\AppData\Local\Temp/ccFNqysF.s:54     .text:00000022 scan_encoder
+C:\Users\JOSHUA~1\AppData\Local\Temp/ccFNqysF.s:342    .bss:00000003 last.1265
+                            *COM*:00000001 delta
+C:\Users\JOSHUA~1\AppData\Local\Temp/ccFNqysF.s:101    .text:00000054 os_enc_delta
+C:\Users\JOSHUA~1\AppData\Local\Temp/ccFNqysF.s:122    .text:00000066 scan_switches
+                            *COM*:00000001 switch_state
+C:\Users\JOSHUA~1\AppData\Local\Temp/ccFNqysF.s:341    .bss:00000002 ct0.1296
+C:\Users\JOSHUA~1\AppData\Local\Temp/ccFNqysF.s:340    .bss:00000001 ct1.1297
+                            *COM*:00000001 switch_press
+                             .bss:00000000 rpt.1298
+                            *COM*:00000001 switch_rpt
+C:\Users\JOSHUA~1\AppData\Local\Temp/ccFNqysF.s:194    .text:000000e8 get_switch_press
+C:\Users\JOSHUA~1\AppData\Local\Temp/ccFNqysF.s:216    .text:000000fc get_switch_rpt
+C:\Users\JOSHUA~1\AppData\Local\Temp/ccFNqysF.s:238    .text:00000110 get_switch_state
+C:\Users\JOSHUA~1\AppData\Local\Temp/ccFNqysF.s:255    .text:00000118 get_switch_short
+C:\Users\JOSHUA~1\AppData\Local\Temp/ccFNqysF.s:286    .text:00000134 get_switch_long
+C:\Users\JOSHUA~1\AppData\Local\Temp/ccFNqysF.s:326    .text:00000156 clear_switches
+
+UNDEFINED SYMBOLS
+__do_clear_bss
