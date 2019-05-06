@@ -3954,43 +3954,43 @@
  4267               	.Letext0:
 DEFINED SYMBOLS
                             *ABS*:00000000 lcd.c
-C:\Users\JOSHUA~1\AppData\Local\Temp/cchPmOd7.s:2      *ABS*:0000003f __SREG__
-C:\Users\JOSHUA~1\AppData\Local\Temp/cchPmOd7.s:3      *ABS*:0000003e __SP_H__
-C:\Users\JOSHUA~1\AppData\Local\Temp/cchPmOd7.s:4      *ABS*:0000003d __SP_L__
-C:\Users\JOSHUA~1\AppData\Local\Temp/cchPmOd7.s:5      *ABS*:00000034 __CCP__
-C:\Users\JOSHUA~1\AppData\Local\Temp/cchPmOd7.s:6      *ABS*:00000000 __tmp_reg__
-C:\Users\JOSHUA~1\AppData\Local\Temp/cchPmOd7.s:7      *ABS*:00000001 __zero_reg__
-C:\Users\JOSHUA~1\AppData\Local\Temp/cchPmOd7.s:18     .text:00000000 lcd_brightness
-C:\Users\JOSHUA~1\AppData\Local\Temp/cchPmOd7.s:39     .text:00000012 set_orientation
+C:\Users\JOSHUA~1\AppData\Local\Temp/ccjBwOxM.s:2      *ABS*:0000003f __SREG__
+C:\Users\JOSHUA~1\AppData\Local\Temp/ccjBwOxM.s:3      *ABS*:0000003e __SP_H__
+C:\Users\JOSHUA~1\AppData\Local\Temp/ccjBwOxM.s:4      *ABS*:0000003d __SP_L__
+C:\Users\JOSHUA~1\AppData\Local\Temp/ccjBwOxM.s:5      *ABS*:00000034 __CCP__
+C:\Users\JOSHUA~1\AppData\Local\Temp/ccjBwOxM.s:6      *ABS*:00000000 __tmp_reg__
+C:\Users\JOSHUA~1\AppData\Local\Temp/ccjBwOxM.s:7      *ABS*:00000001 __zero_reg__
+C:\Users\JOSHUA~1\AppData\Local\Temp/ccjBwOxM.s:18     .text:00000000 lcd_brightness
+C:\Users\JOSHUA~1\AppData\Local\Temp/ccjBwOxM.s:39     .text:00000012 set_orientation
                             *COM*:0000000d display
-C:\Users\JOSHUA~1\AppData\Local\Temp/cchPmOd7.s:206    .text:00000100 set_frame_rate_hz
-C:\Users\JOSHUA~1\AppData\Local\Temp/cchPmOd7.s:309    .text:00000172 fill_image_pgm
-C:\Users\JOSHUA~1\AppData\Local\Temp/cchPmOd7.s:688    .text:000002fa fill_image_pgm_2b
-C:\Users\JOSHUA~1\AppData\Local\Temp/cchPmOd7.s:1040   .text:00000482 fill_image
-C:\Users\JOSHUA~1\AppData\Local\Temp/cchPmOd7.s:1318   .text:000005e2 fill_rectangle
-C:\Users\JOSHUA~1\AppData\Local\Temp/cchPmOd7.s:1574   .text:0000074c fill_rectangle_c
-C:\Users\JOSHUA~1\AppData\Local\Temp/cchPmOd7.s:1803   .text:00000872 fill_rectangle_indexed
-C:\Users\JOSHUA~1\AppData\Local\Temp/cchPmOd7.s:1936   .text:0000092a clear_screen
-C:\Users\JOSHUA~1\AppData\Local\Temp/cchPmOd7.s:2003   .text:000009a8 init_lcd
-C:\Users\JOSHUA~1\AppData\Local\Temp/cchPmOd7.s:2306   .text:00000ae6 display_char_col
-C:\Users\JOSHUA~1\AppData\Local\Temp/cchPmOd7.s:3542   .progmem.data:00000000 font5x7
-C:\Users\JOSHUA~1\AppData\Local\Temp/cchPmOd7.s:2588   .text:00000c78 display_char_xy_col
-C:\Users\JOSHUA~1\AppData\Local\Temp/cchPmOd7.s:2620   .text:00000c9a display_char
-C:\Users\JOSHUA~1\AppData\Local\Temp/cchPmOd7.s:2640   .text:00000cb0 display_string_col
-C:\Users\JOSHUA~1\AppData\Local\Temp/cchPmOd7.s:2689   .text:00000cea display_string
-C:\Users\JOSHUA~1\AppData\Local\Temp/cchPmOd7.s:2707   .text:00000cf8 display_string_xy_col
-C:\Users\JOSHUA~1\AppData\Local\Temp/cchPmOd7.s:2763   .text:00000d42 display_string_xy
-C:\Users\JOSHUA~1\AppData\Local\Temp/cchPmOd7.s:2781   .text:00000d50 display_register
-C:\Users\JOSHUA~1\AppData\Local\Temp/cchPmOd7.s:2847   .text:00000da0 itoa
-C:\Users\JOSHUA~1\AppData\Local\Temp/cchPmOd7.s:2945   .text:00000e22 longtoa
-C:\Users\JOSHUA~1\AppData\Local\Temp/cchPmOd7.s:3098   .text:00000f0a shorttoa
-C:\Users\JOSHUA~1\AppData\Local\Temp/cchPmOd7.s:3221   .text:00000fbc display_uint8
-C:\Users\JOSHUA~1\AppData\Local\Temp/cchPmOd7.s:3252   .text:00000fe2 display_uint32
-C:\Users\JOSHUA~1\AppData\Local\Temp/cchPmOd7.s:3290   .text:00001016 display_uint16
-C:\Users\JOSHUA~1\AppData\Local\Temp/cchPmOd7.s:3328   .text:0000104a display_uint16_xy_col
-C:\Users\JOSHUA~1\AppData\Local\Temp/cchPmOd7.s:3388   .text:000010a2 display_uint16_xy
-C:\Users\JOSHUA~1\AppData\Local\Temp/cchPmOd7.s:3441   .text:000010ee display_uint16_col
-C:\Users\JOSHUA~1\AppData\Local\Temp/cchPmOd7.s:3487   .text:0000112e display_uint8_xy_col
+C:\Users\JOSHUA~1\AppData\Local\Temp/ccjBwOxM.s:206    .text:00000100 set_frame_rate_hz
+C:\Users\JOSHUA~1\AppData\Local\Temp/ccjBwOxM.s:309    .text:00000172 fill_image_pgm
+C:\Users\JOSHUA~1\AppData\Local\Temp/ccjBwOxM.s:688    .text:000002fa fill_image_pgm_2b
+C:\Users\JOSHUA~1\AppData\Local\Temp/ccjBwOxM.s:1040   .text:00000482 fill_image
+C:\Users\JOSHUA~1\AppData\Local\Temp/ccjBwOxM.s:1318   .text:000005e2 fill_rectangle
+C:\Users\JOSHUA~1\AppData\Local\Temp/ccjBwOxM.s:1574   .text:0000074c fill_rectangle_c
+C:\Users\JOSHUA~1\AppData\Local\Temp/ccjBwOxM.s:1803   .text:00000872 fill_rectangle_indexed
+C:\Users\JOSHUA~1\AppData\Local\Temp/ccjBwOxM.s:1936   .text:0000092a clear_screen
+C:\Users\JOSHUA~1\AppData\Local\Temp/ccjBwOxM.s:2003   .text:000009a8 init_lcd
+C:\Users\JOSHUA~1\AppData\Local\Temp/ccjBwOxM.s:2306   .text:00000ae6 display_char_col
+C:\Users\JOSHUA~1\AppData\Local\Temp/ccjBwOxM.s:3542   .progmem.data:00000000 font5x7
+C:\Users\JOSHUA~1\AppData\Local\Temp/ccjBwOxM.s:2588   .text:00000c78 display_char_xy_col
+C:\Users\JOSHUA~1\AppData\Local\Temp/ccjBwOxM.s:2620   .text:00000c9a display_char
+C:\Users\JOSHUA~1\AppData\Local\Temp/ccjBwOxM.s:2640   .text:00000cb0 display_string_col
+C:\Users\JOSHUA~1\AppData\Local\Temp/ccjBwOxM.s:2689   .text:00000cea display_string
+C:\Users\JOSHUA~1\AppData\Local\Temp/ccjBwOxM.s:2707   .text:00000cf8 display_string_xy_col
+C:\Users\JOSHUA~1\AppData\Local\Temp/ccjBwOxM.s:2763   .text:00000d42 display_string_xy
+C:\Users\JOSHUA~1\AppData\Local\Temp/ccjBwOxM.s:2781   .text:00000d50 display_register
+C:\Users\JOSHUA~1\AppData\Local\Temp/ccjBwOxM.s:2847   .text:00000da0 itoa
+C:\Users\JOSHUA~1\AppData\Local\Temp/ccjBwOxM.s:2945   .text:00000e22 longtoa
+C:\Users\JOSHUA~1\AppData\Local\Temp/ccjBwOxM.s:3098   .text:00000f0a shorttoa
+C:\Users\JOSHUA~1\AppData\Local\Temp/ccjBwOxM.s:3221   .text:00000fbc display_uint8
+C:\Users\JOSHUA~1\AppData\Local\Temp/ccjBwOxM.s:3252   .text:00000fe2 display_uint32
+C:\Users\JOSHUA~1\AppData\Local\Temp/ccjBwOxM.s:3290   .text:00001016 display_uint16
+C:\Users\JOSHUA~1\AppData\Local\Temp/ccjBwOxM.s:3328   .text:0000104a display_uint16_xy_col
+C:\Users\JOSHUA~1\AppData\Local\Temp/ccjBwOxM.s:3388   .text:000010a2 display_uint16_xy
+C:\Users\JOSHUA~1\AppData\Local\Temp/ccjBwOxM.s:3441   .text:000010ee display_uint16_col
+C:\Users\JOSHUA~1\AppData\Local\Temp/ccjBwOxM.s:3487   .text:0000112e display_uint8_xy_col
 
 UNDEFINED SYMBOLS
 __floatsisf

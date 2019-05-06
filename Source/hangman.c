@@ -6,7 +6,7 @@ See hangman.h for further comments and licence
 
 //vs computer words.
 //Feel free to edit these words, full capitals are advised but not required.
-char const word_array[9][10] = {"GAMING", "GAMER", "MEMER", "DAB", "TROLLER", "COOKER", "CRAFTER", "MINECRAFT", "HANGMAN"};
+char const word_array[9][10] = {"LA_FORTUNA", "HANGMAN", "COMP_SCI", "KLAUS", "COMP_SYS", "GAMING", "MINECRAFT", "FORTNITE", "DAB"};
 
 ISR(TIMER3_COMPA_vect) {
     scan_switches();
@@ -54,8 +54,10 @@ void draw_home_screen(void) {
     uint8_t triangle_y;
     if(last_selected_item == selected_item) return;
     clear_screen();
-    display_string_xy("V2.8", 10, 10);
+    display_string_xy("V3.0", 10, 10);
     display_string_xy("Welcome to La Hangman!", 85, 20);
+    draw_hangman_full();
+    display_string_xy("By Joshua Gregory", 85, 200);
     //display_uint16_xy(rand(), 85, 32); //displays the random number generated
     display_string_xy_col("VS Computer", midPos, 90, selected_item == 0 ? BLUE : WHITE);
     display_string_xy_col("VS Human", midPos, 115, selected_item == 1 ? BLUE : WHITE);
@@ -404,6 +406,36 @@ void draw_hangman_piece(void) {
     }
 }
 
+void draw_hangman_full(void) {
+    display_string_xy("_____________", 200, 120);
+    display_string_xy("|", 270, 43);
+    display_string_xy("|", 270, 50);
+    display_string_xy("|", 270, 57);
+    display_string_xy("|", 270, 64);
+    display_string_xy("|", 270, 71);
+    display_string_xy("|", 270, 78);
+    display_string_xy("|", 270, 85);
+    display_string_xy("|", 270, 92);
+    display_string_xy("|", 270, 99);
+    display_string_xy("|", 270, 106);
+    display_string_xy("|", 270, 113);
+    display_string_xy("|", 270, 120);
+    display_string_xy("__________", 215, 43);
+    display_string_xy("\\", 266, 50);
+    display_string_xy("|", 215, 50);
+    display_string_xy("_", 214, 52);
+    display_string_xy("()", 211, 59);
+    display_string_xy("_", 214, 59);
+    display_string_xy("|", 215, 50);
+    display_string_xy("|", 215, 66);
+    display_string_xy("|", 215, 73);
+    display_string_xy("|", 215, 78);
+    display_string_xy("/", 211, 71);
+    display_string_xy("\\", 218, 71);
+    display_string_xy("/", 212, 84);
+    display_string_xy("\\", 217, 84);
+}    
+    
 void main(void) {
     os_init();
     do {

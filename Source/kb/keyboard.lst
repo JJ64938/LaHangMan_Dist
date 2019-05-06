@@ -1479,31 +1479,31 @@
  1616               	.Letext0:
 DEFINED SYMBOLS
                             *ABS*:00000000 keyboard.c
-C:\Users\JOSHUA~1\AppData\Local\Temp/cc9EHVeS.s:2      *ABS*:0000003f __SREG__
-C:\Users\JOSHUA~1\AppData\Local\Temp/cc9EHVeS.s:3      *ABS*:0000003e __SP_H__
-C:\Users\JOSHUA~1\AppData\Local\Temp/cc9EHVeS.s:4      *ABS*:0000003d __SP_L__
-C:\Users\JOSHUA~1\AppData\Local\Temp/cc9EHVeS.s:5      *ABS*:00000034 __CCP__
-C:\Users\JOSHUA~1\AppData\Local\Temp/cc9EHVeS.s:6      *ABS*:00000000 __tmp_reg__
-C:\Users\JOSHUA~1\AppData\Local\Temp/cc9EHVeS.s:7      *ABS*:00000001 __zero_reg__
-C:\Users\JOSHUA~1\AppData\Local\Temp/cc9EHVeS.s:18     .text:00000000 init_keyboard
+C:\Users\JOSHUA~1\AppData\Local\Temp/ccloLWcz.s:2      *ABS*:0000003f __SREG__
+C:\Users\JOSHUA~1\AppData\Local\Temp/ccloLWcz.s:3      *ABS*:0000003e __SP_H__
+C:\Users\JOSHUA~1\AppData\Local\Temp/ccloLWcz.s:4      *ABS*:0000003d __SP_L__
+C:\Users\JOSHUA~1\AppData\Local\Temp/ccloLWcz.s:5      *ABS*:00000034 __CCP__
+C:\Users\JOSHUA~1\AppData\Local\Temp/ccloLWcz.s:6      *ABS*:00000000 __tmp_reg__
+C:\Users\JOSHUA~1\AppData\Local\Temp/ccloLWcz.s:7      *ABS*:00000001 __zero_reg__
+C:\Users\JOSHUA~1\AppData\Local\Temp/ccloLWcz.s:18     .text:00000000 init_keyboard
                             *COM*:00000001 last_sel
-C:\Users\JOSHUA~1\AppData\Local\Temp/cc9EHVeS.s:1442   .data:00000000 upper_arr
+C:\Users\JOSHUA~1\AppData\Local\Temp/ccloLWcz.s:1442   .data:00000000 upper_arr
                             *COM*:00000002 curr_array
                             *COM*:00000001 last_string_pos
                             *COM*:00000001 string_pos
                             *COM*:00000001 sel
                             *COM*:0000000b k_str
-C:\Users\JOSHUA~1\AppData\Local\Temp/cc9EHVeS.s:54     .text:00000032 reset_k_str
-C:\Users\JOSHUA~1\AppData\Local\Temp/cc9EHVeS.s:79     .text:00000052 reset_k_str_full
-C:\Users\JOSHUA~1\AppData\Local\Temp/cc9EHVeS.s:108    .text:00000074 draw_square_mine
-C:\Users\JOSHUA~1\AppData\Local\Temp/cc9EHVeS.s:1475   .data:0000001e lower_arr
-C:\Users\JOSHUA~1\AppData\Local\Temp/cc9EHVeS.s:297    .text:0000019a draw_grid_mine
-C:\Users\JOSHUA~1\AppData\Local\Temp/cc9EHVeS.s:474    .text:000002ba draw_keyboard_no_word
-C:\Users\JOSHUA~1\AppData\Local\Temp/cc9EHVeS.s:530    .text:00000320 draw_square
-C:\Users\JOSHUA~1\AppData\Local\Temp/cc9EHVeS.s:810    .text:000004da draw_grid
-C:\Users\JOSHUA~1\AppData\Local\Temp/cc9EHVeS.s:987    .text:000005fa draw_keyboard
-C:\Users\JOSHUA~1\AppData\Local\Temp/cc9EHVeS.s:1053   .text:00000674 move_keyboard_char
-C:\Users\JOSHUA~1\AppData\Local\Temp/cc9EHVeS.s:1239   .text:000007b2 move_keyboard
+C:\Users\JOSHUA~1\AppData\Local\Temp/ccloLWcz.s:54     .text:00000032 reset_k_str
+C:\Users\JOSHUA~1\AppData\Local\Temp/ccloLWcz.s:79     .text:00000052 reset_k_str_full
+C:\Users\JOSHUA~1\AppData\Local\Temp/ccloLWcz.s:108    .text:00000074 draw_square_mine
+C:\Users\JOSHUA~1\AppData\Local\Temp/ccloLWcz.s:1475   .data:0000001e lower_arr
+C:\Users\JOSHUA~1\AppData\Local\Temp/ccloLWcz.s:297    .text:0000019a draw_grid_mine
+C:\Users\JOSHUA~1\AppData\Local\Temp/ccloLWcz.s:474    .text:000002ba draw_keyboard_no_word
+C:\Users\JOSHUA~1\AppData\Local\Temp/ccloLWcz.s:530    .text:00000320 draw_square
+C:\Users\JOSHUA~1\AppData\Local\Temp/ccloLWcz.s:810    .text:000004da draw_grid
+C:\Users\JOSHUA~1\AppData\Local\Temp/ccloLWcz.s:987    .text:000005fa draw_keyboard
+C:\Users\JOSHUA~1\AppData\Local\Temp/ccloLWcz.s:1053   .text:00000674 move_keyboard_char
+C:\Users\JOSHUA~1\AppData\Local\Temp/ccloLWcz.s:1239   .text:000007b2 move_keyboard
 
 UNDEFINED SYMBOLS
 fill_rectangle_c

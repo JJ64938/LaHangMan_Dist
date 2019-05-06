@@ -321,30 +321,30 @@
  444               	.Letext0:
 DEFINED SYMBOLS
                             *ABS*:00000000 encoder.c
-C:\Users\JOSHUA~1\AppData\Local\Temp/ccFNqysF.s:2      *ABS*:0000003f __SREG__
-C:\Users\JOSHUA~1\AppData\Local\Temp/ccFNqysF.s:3      *ABS*:0000003e __SP_H__
-C:\Users\JOSHUA~1\AppData\Local\Temp/ccFNqysF.s:4      *ABS*:0000003d __SP_L__
-C:\Users\JOSHUA~1\AppData\Local\Temp/ccFNqysF.s:5      *ABS*:00000034 __CCP__
-C:\Users\JOSHUA~1\AppData\Local\Temp/ccFNqysF.s:6      *ABS*:00000000 __tmp_reg__
-C:\Users\JOSHUA~1\AppData\Local\Temp/ccFNqysF.s:7      *ABS*:00000001 __zero_reg__
-C:\Users\JOSHUA~1\AppData\Local\Temp/ccFNqysF.s:18     .text:00000000 init_encoder
-C:\Users\JOSHUA~1\AppData\Local\Temp/ccFNqysF.s:54     .text:00000022 scan_encoder
-C:\Users\JOSHUA~1\AppData\Local\Temp/ccFNqysF.s:342    .bss:00000003 last.1265
+C:\Users\JOSHUA~1\AppData\Local\Temp/ccxAQRak.s:2      *ABS*:0000003f __SREG__
+C:\Users\JOSHUA~1\AppData\Local\Temp/ccxAQRak.s:3      *ABS*:0000003e __SP_H__
+C:\Users\JOSHUA~1\AppData\Local\Temp/ccxAQRak.s:4      *ABS*:0000003d __SP_L__
+C:\Users\JOSHUA~1\AppData\Local\Temp/ccxAQRak.s:5      *ABS*:00000034 __CCP__
+C:\Users\JOSHUA~1\AppData\Local\Temp/ccxAQRak.s:6      *ABS*:00000000 __tmp_reg__
+C:\Users\JOSHUA~1\AppData\Local\Temp/ccxAQRak.s:7      *ABS*:00000001 __zero_reg__
+C:\Users\JOSHUA~1\AppData\Local\Temp/ccxAQRak.s:18     .text:00000000 init_encoder
+C:\Users\JOSHUA~1\AppData\Local\Temp/ccxAQRak.s:54     .text:00000022 scan_encoder
+C:\Users\JOSHUA~1\AppData\Local\Temp/ccxAQRak.s:342    .bss:00000003 last.1265
                             *COM*:00000001 delta
-C:\Users\JOSHUA~1\AppData\Local\Temp/ccFNqysF.s:101    .text:00000054 os_enc_delta
-C:\Users\JOSHUA~1\AppData\Local\Temp/ccFNqysF.s:122    .text:00000066 scan_switches
+C:\Users\JOSHUA~1\AppData\Local\Temp/ccxAQRak.s:101    .text:00000054 os_enc_delta
+C:\Users\JOSHUA~1\AppData\Local\Temp/ccxAQRak.s:122    .text:00000066 scan_switches
                             *COM*:00000001 switch_state
-C:\Users\JOSHUA~1\AppData\Local\Temp/ccFNqysF.s:341    .bss:00000002 ct0.1296
-C:\Users\JOSHUA~1\AppData\Local\Temp/ccFNqysF.s:340    .bss:00000001 ct1.1297
+C:\Users\JOSHUA~1\AppData\Local\Temp/ccxAQRak.s:341    .bss:00000002 ct0.1296
+C:\Users\JOSHUA~1\AppData\Local\Temp/ccxAQRak.s:340    .bss:00000001 ct1.1297
                             *COM*:00000001 switch_press
                              .bss:00000000 rpt.1298
                             *COM*:00000001 switch_rpt
-C:\Users\JOSHUA~1\AppData\Local\Temp/ccFNqysF.s:194    .text:000000e8 get_switch_press
-C:\Users\JOSHUA~1\AppData\Local\Temp/ccFNqysF.s:216    .text:000000fc get_switch_rpt
-C:\Users\JOSHUA~1\AppData\Local\Temp/ccFNqysF.s:238    .text:00000110 get_switch_state
-C:\Users\JOSHUA~1\AppData\Local\Temp/ccFNqysF.s:255    .text:00000118 get_switch_short
-C:\Users\JOSHUA~1\AppData\Local\Temp/ccFNqysF.s:286    .text:00000134 get_switch_long
-C:\Users\JOSHUA~1\AppData\Local\Temp/ccFNqysF.s:326    .text:00000156 clear_switches
+C:\Users\JOSHUA~1\AppData\Local\Temp/ccxAQRak.s:194    .text:000000e8 get_switch_press
+C:\Users\JOSHUA~1\AppData\Local\Temp/ccxAQRak.s:216    .text:000000fc get_switch_rpt
+C:\Users\JOSHUA~1\AppData\Local\Temp/ccxAQRak.s:238    .text:00000110 get_switch_state
+C:\Users\JOSHUA~1\AppData\Local\Temp/ccxAQRak.s:255    .text:00000118 get_switch_short
+C:\Users\JOSHUA~1\AppData\Local\Temp/ccxAQRak.s:286    .text:00000134 get_switch_long
+C:\Users\JOSHUA~1\AppData\Local\Temp/ccxAQRak.s:326    .text:00000156 clear_switches
 
 UNDEFINED SYMBOLS
 __do_clear_bss
